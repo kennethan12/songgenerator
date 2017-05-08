@@ -8,9 +8,10 @@ let_it_be = "When I find myself in times of trouble Mother Mary comes to me Spea
 punctuation = [".",",","!","?",":",";",'"',"'","(",")"]
 stopwords = ["and","but","in","it","its","that","to","is","are","on","a","the"]
 
+from random import randint
+
 def canon(s):
-    # Canonizes each word in the lyrics and adds them
-    # in a list alphabetically. Punctuation is taken out.
+    """Canonizes each word in the lyrics and adds them in a list alphabetically. Punctuation is taken out."""
     s = s.lower()
     s = s.split()
     s = sorted(s)
@@ -23,8 +24,7 @@ def canon(s):
     return result
 
 def one(s):
-    # When a word in a list has more than one frequency
-    # this limits the word into one frequnecy.
+    """When a word in a list has more than one frequency this limits the word into one frequnecy."""
     result = []
     for word in s:
         if word not in stopwords:
@@ -33,8 +33,62 @@ def one(s):
                     result.append(word)
     return result
 
-def compare(a,b):
+def window(s, w):
+    if w > len(s):
+        print("Too many keywords! Try a smaller number.")
+    else:
+        result1 = []
+        result2 = []
+        while (len(result1) < w):
+            n = randint(0,len(s)-1)
+            if n not in result1:
+                result1.append(n)
+        for i in range(0,len(result1)):
+            term = result1[i]
+            result2.append(s[term])
+        return(result2)
+
+if __name__ == "__main__":
+    lyrics = hey_jude
+    canon = canon(lyrics)
+    one = one(canon)
+    key = input("How many keywords? (The more the merrier!): ")
+    window = window(one,int(key))
+    print(window)
+
+
+__all__ = ['Keywords']
+
+class Keywords(object):
+    """A class which picks out certain keywords from the lyrics of an inputted song."""
+
+    __slots__ = [ "_window"]
+
+    def __init__(self, window = 5):
+        self._window = window
+
+    def canon(self, s):
+        """Canonizes each word in the lyrics and adds them in an alphabetical list"""
+        s = s.lower()
+        s = s.split()
+        s = sorted(s)
+        result = []
+        for word in s:
+            for i in punctuation:
+                if i in word:
+                    word = word.replace(i, '')
+            result.append(word)
+        return result
+
+    def one(s):
+        """When a word in a list has more than one frequency this limits the word into one frequnecy."""
+        result = []
+        for word in s:
+            if word not in stopwords:
+                if word not in result:
+                    if s.count(word) > 1:
+                        result.append(word)
+        return result
+
+
     
-
-
-one(canon(hey_jude))
