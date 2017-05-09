@@ -9,6 +9,7 @@ punctuation = [".",",","!","?",":",";",'"',"'","(",")"]
 stopwords = ["and","but","in","it","its","that","to","is","are","on","a","the"]
 
 from random import randint
+from collections import Counter
 
 def canon(s):
     """Canonizes each word in the lyrics and adds them in a list alphabetically. Punctuation is taken out."""
@@ -34,6 +35,7 @@ def one(s):
     return result
 
 def window(s, w):
+    """Finds keywords."""
     if w > len(s):
         print("Too many keywords! Try a smaller number.")
     else:
@@ -47,6 +49,10 @@ def window(s, w):
             term = result1[i]
             result2.append(s[term])
         return(result2)
+
+def frequency(l):
+    result = Counter(l)
+    print(result)
 
 if __name__ == "__main__":
     lyrics = hey_jude
