@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 # (c) 2017 Kenneth An
 
-hey_jude = "Hey, Jude, don't make it bad Take a sad song and make it better Remember to let her into your heart Then you can start to make it better Hey, Jude, don't be afraid You were made to go out and get her The minute you let her under your skin Then you begin to make it better And anytime you feel the pain, Hey, Jude, refrain Don't carry the world upon your shoulders For well you know that it's a fool Who plays it cool By making his world a little colder Nah, nah nah, nah nah, nah nah, nah nah Hey, Jude, don't let me down You have found her, now go and get her Remember to let her into your heart Then you can start to make it better So let it out and let it in, Hey Jude, begin You're waiting for someone to perform with And don't you know that it's just you, Hey Jude, you'll do The movement you need is on your shoulder Nah, nah nah, nah nah, nah nah, nah nah yeah Hey, Jude don't make it bad Take a sad song and make it better Remember to let her under your skin Then you'll begin to make it better, better, better, better, better... oh! Nah, nah nah, nah nah, nah, nah, nah nah, Hey Jude"
-
-let_it_be = "When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom Let it be And in my hour of darkness She is standing right in front of me Speaking words of wisdom Let it be Let it be Let it be Let it be Let it be Whisper words of wisdom Let it be And when the broken-hearted people Living in the world agree There will be an answer Let it be For though they may be parted there is Still a chance that they will see There will be an answer Let it be Let it be, let it be, let it be, let it be Yeah, there will be an answer Let it be Let it be, let it be, let it be, let it be Whisper words of wisdom Let it be Let it be, let it be, let it be, let it be Whisper words of wisdom Let it be And when the night is cloudy There is still a light that shines on me Shine until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom Let it be Let it be, let it be, let it be, yeah, let it be There will be an answer Let it be Let it be, let it be, let it be, yeah, let it be There will be an answer let it be Let it be, let it be, let it be, yeah, let it be Whisper words of wisdom Let it be"
-
-strawberry_fields_forever = "Let me take you down, 'cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Living is easy with eyes closed Misunderstanding all you see It's getting hard to be someone but it all works out It doesn't matter much to me Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever No one I think is in my tree I mean it must be high or low That is you can't you know tune in but it's all right That is I think it's not too bad Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Always, no sometimes, think it's me But you know I know when it's a dream I think I know I mean a 'yes' but it's all wrong That is I think I disagree Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Strawberry Fields forever Strawberry Fields forever Cranberry sauce"
-
-beatles = [['Hey Jude', "Hey, Jude, don't make it bad Take a sad song and make it better Remember to let her into your heart Then you can start to make it better Hey, Jude, don't be afraid You were made to go out and get her The minute you let her under your skin Then you begin to make it better And anytime you feel the pain, Hey, Jude, refrain Don't carry the world upon your shoulders For well you know that it's a fool Who plays it cool By making his world a little colder Nah, nah nah, nah nah, nah nah, nah nah Hey, Jude, don't let me down You have found her, now go and get her Remember to let her into your heart Then you can start to make it better So let it out and let it in, Hey Jude, begin You're waiting for someone to perform with And don't you know that it's just you, Hey Jude, you'll do The movement you need is on your shoulder Nah, nah nah, nah nah, nah nah, nah nah yeah Hey, Jude don't make it bad Take a sad song and make it better Remember to let her under your skin Then you'll begin to make it better, better, better, better, better... oh! Nah, nah nah, nah nah, nah, nah, nah nah, Hey Jude"],["Let It Be","When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom Let it be And in my hour of darkness She is standing right in front of me Speaking words of wisdom Let it be Let it be Let it be Let it be Let it be Whisper words of wisdom Let it be And when the broken-hearted people Living in the world agree There will be an answer Let it be For though they may be parted there is Still a chance that they will see There will be an answer Let it be Let it be, let it be, let it be, let it be Yeah, there will be an answer Let it be Let it be, let it be, let it be, let it be Whisper words of wisdom Let it be Let it be, let it be, let it be, let it be Whisper words of wisdom Let it be And when the night is cloudy There is still a light that shines on me Shine until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom Let it be Let it be, let it be, let it be, yeah, let it be There will be an answer Let it be Let it be, let it be, let it be, yeah, let it be there will be an answer let it be Let it be, let it be, let it be, yeah, let it be Whisper words of wisdom Let it be"],["Strawberry Fields Forever","Let me take you down, 'cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Living is easy with eyes closed Misunderstanding all you see It's getting hard to be someone but it all works out It doesn't matter much to me Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever No one I think is in my tree I mean it must be high or low That is you can't you know tune in but it's all right That is I think it's not too bad Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Always, no sometimes, think it's me But you know I know when it's a dream I think I know I mean a 'yes' but it's all wrong That is I think I disagree Let me take you down, cause I'm going to Strawberry Fields Nothing is real and nothing to get hung about Strawberry Fields forever Strawberry Fields forever Strawberry Fields forever Cranberry sauce"],["Yesterday","Yesterday, all my troubles seemed so far away Now it looks as though they're here to stay Oh, I believe in yesterday, Suddenly, I'm not half the man I used to be, There's a shadow hanging over me. Oh, yesterday came suddenly. Why she had to go I don't know she wouldn't say. I said something wrong, now I long for yesterday. Yesterday, love was such an easy game to play. Now I need a place to hide away. Oh, I believe in yesterday. Why she had to go I don't know she wouldn't say. I said something wrong, now I long for yesterday. Yesterday, love was such an easy game to play. Now I need a place to hide away. Oh, I believe in yesterday. Mm mm mm mm mm mm mm."]]
-
-
-punctuation = [".",",","!","?",":",";",'"',"'","(",")"]
-stopwords = ["and","but","in","it","its","that","to","is","are","on","a","the"]
+"""A song generator: The user can enter a Beatles song and the program
+will return a song that has the most words matched with the inputted 
+song. The user can also enter a keyword and the program will return 
+the song that has the most frequency of these words."""
 
 
 from random import randint
-from collections import Counter
+import csv
+import codecs
+import itertools
+
+punctuation = [".",",","!","?",":",";",'"',"'","(",")","-","/","\\"]
+stopwords = ["and","but","in","it","its","that","to","is","are","on","a","the","i","of","oh"]
 
 
 def canon(s):
@@ -80,7 +78,7 @@ def frequency(l):
     return result
 
 def match(a,b):
-    """Identifies an inputted number of w keywords of a in frequency list of b."""
+    """Identifies keywords of a in frequency list of b."""
     result = []
     for word in a:
         for term in b:
@@ -88,15 +86,25 @@ def match(a,b):
                 result.append(term)
     return result
 
-def identify(l):
-    plug = input("Beatles Song Name? ")
+def readDB(database='thebeatles.csv'):
+    """Reads the Beatles lyrics csv file."""
+    results = []
+    with codecs.open(database,'r', encoding='utf-8', errors='ignore') as f:
+        csvf = csv.reader(f)
+        for row in csvf:
+            results.append(row)
+    return results
+
+def generate(l):
+    """Finds the song that has the most words in the inputted song matched in its lyrics."""
+    plug = input("The Beatles song name? ")
     title = str(plug)
     compareList = []
     matchList = []
     matched = []
     
     for song in l:
-        if song[0] == title:
+        if song[0].lower() == title.lower():
             inputtedSong = song
             lyrics1 = song[1]
         else:
@@ -122,46 +130,69 @@ def identify(l):
                 key = matched[i][j][0].title()
                 keywords.append(key)
     
-    #if len(matched) == 1:
-    
     print("Your generated song is: {}.".format(matched[0][-1]))
     print("The keywords identified are: {}".format(', '.join(keywords)))
+
+def identify(s,l):
+    """Finds the song with the most frequency of an inputted keyword."""
+    find = []
+    most = []
+    titles = []
+    s = str(s)
+    s = s.lower()
+    for i in range(0,len(l)):
+        if s in l[i][1]:
+            lyrics = frequency(canon(l[i][1]))
+            for i in range(0,len(lyrics)):
+                if s == lyrics[i][0]:
+                    song = [l[i][0],int(lyrics[i][1])]
+                    find.append(song)
+                    most.append(int(lyrics[i][1]))
+    for i in range(0,len(find)):    
+        if max(most) == find[i][1]:
+            titles.append(find[i][0])
     
-    #elif len(matched) > 1:
-    #    c = 0
-    #    maxes = []
-    #    for i in range(0,len(matched)):
-    #        for j in range(0,len(matched[i])):
-    #            if matched[i][j] == matched[i][-1]:
-    #                c += matched[i][j][1]
-    #                print(c)
-
-
+    if titles != []:
+        if len(titles) > 1:
+            print("The songs that have the most of these keywords are: {}. The word '{}' comes up {} times.".format(', '.join(titles), s, max(most)))
+    
+        print("The song that has the most of this word is: {}. The word '{}' comes up {} times.".format(titles[0], s, max(most)))
+    
+    elif titles == []:
+        print("No result, sorry! Come back with a new keyword.")
 
 if __name__ == "__main__":
-    #title = str(input("Song Name? "))
-    #title = title.lower()
-    #title = title.replace(' ','_')
-    #for song in beatles:
-    #    if song[0] == title:
-    #        lyrics1 = song[1]
-    #lyrics2 = strawberry_fields_forever
-    #canon1 = canon(lyrics1)
-    #one = one(canon1)
-    #key = input("How many keywords? (The more the merrier!): ")
-    #window = window(one,int(key))
-    #canon2 = canon(lyrics2)
-    #freq = frequency(canon2)
-    #print(match(one,freq))
-    #file = ' '.join([line.strip() for line in open('thebeatles.txt')])
-    
-    #lyrics1 = strawberry_fields_forever
-    #lyrics2 = hey_jude
-    #canon1 = canon(lyrics1)
-    #one = one(canon1)
-    #canon2 = canon(lyrics2)
-    #freq = frequency(canon2)
-    #print(freq)
-    
-    identify(beatles)
-    
+    print("""
+""")
+    print("""Welcome to The Beatles Song Generator!
+This application shows you a Beatles song that either:
+
+1) has the most words similar to a song you input, or
+2) has the most frequency of a word you input.
+
+The Beatles song lyric database is from George Wagner's Beatles Website.
+""")
+
+    for i in itertools.count():
+        decision = input("""Would you like to enter a song or a keyword? 
+(Please type 'song' or 'word') """)
+
+        if decision == "song":
+            generate(readDB())
+
+        elif decision == "word":
+            s = input("Keyword? ")
+            identify(s, readDB())
+
+        print("""
+""")
+        decision2 = input("Would you like to use this app again? (yes or no) ")
+
+        print("""
+""")
+
+        if decision2 == 'no':
+            print("Thank you for using The Beatles Song Generator!")
+            print("""
+""")
+            break
