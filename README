@@ -3,25 +3,44 @@ Final Project Folder for CS135, Spring 2017.
  our ability to understand what your project has accomplished and
  how the software is used.]
 
-Student Name: 
-Project Title:
+Student Name: Kenneth An
+Project Title: The Beatles Song Generator
 
 1. Describe (briefly) the files and folders found in this project.
    README - this file, an overview of the project
    Contract.pdf - project proposal
+   songlyrics.py - my final project, The Beatles Song Generator
+   thebeatles.csv - the csv file of all of The Beatles song lyrics
+   thebeatles.csv & song.csv - mock csv files used to test readDB() in songlyrics.py
 
 2. Additional modules (beyond python3, pillow, matplotlib, requests)
-   required by this software:
+   required by this software: csv, codecs, itertools
 
 3. Demonstrable accomplishments of this project:
-
+   1. Able to lowercase, take out punctuation, and sort each word in the lyrics into a list using canon().
+   2. Able to reduce a frequency of a word into one frequency using one().
+   3. Able to create a list of keywords in lyrics under a certain window of the number of words, using window().
+   4. Able to find the frequency of words in a list using frequency().
+   5. Able to identify which words in song "a" exist in song "b" using match(a,b).
+   6. Able to read the Beatles csv fil thebeatles.csv using readDB().
+   7. Able to find the song that has the most words in the inputted song matched in its lyrics, using generate().
+   8. Able to find the song with the most frequency of an inputted word using identify().
+   9. Able to interact with users by asking questions, with the user inputting an answer.
 
 4. Documentation of how CS135 staff would use your software to produce the
    results:
+   Run the program by typing "python3 songlyrics.py". The program gives a general introduction to what it's about. When the program asks your preference of either entering a song or a word, type "song" or "word".
 
-5. Additional comments:
+   If you choose "song", input a Beatles song title. It doesn't matter if capitalized or not. However, the song title should be exactly how it is written in George Wagner's Beatles website (http://www.boskowan.com/www/jirka/beatles/lyrics.htm), since I used titles from the website for the program. When you hit enter, the title of the song will be returned, as well as the keywords that matched the two songs.
 
+   If you choose "word", input a word. It can be any word, but take out punctuation of any kind. When you hit enter, the song title would come out, as well as the frequency of that word in the song.
 
+   After either activity is done, it will ask if you want to run the application again. If you want to have more fun, type "yes" and it'll go back to asking whether you want to enter a song or word. If you're a boring person and type "no", the program thanks you for using it and breaks.
+
+5. Additional comments: 
+   There was a massive problem with the csv file that I made, since I couldn't find anything online that had to do with the entire Beatles lyrics collection in a file. Therefore, some songs happen to not work as well. For example, when plugged in "strawberry" for a word a user wants to input, it doesn't spit out "Strawberry Field Forever," since something about that specific line in the csv file is corrupted. When I plug in a song, some of the keywords the program claims to have used repeat. For example, two keywords are both "you" but are considered different keywords, and I don't know what the bug is. Overall, as my first interactive application ever, I'm proud of it. There's a lot of things I want to improve, but I fulfilled my general purpose and that's what matters. 
+
+Thank you Duane & TA's for helping with this project! This was fun, and I'm looking forward to CSCI 136 next year.
 
 
 

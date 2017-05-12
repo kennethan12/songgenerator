@@ -102,36 +102,45 @@ def generate(l):
     compareList = []
     matchList = []
     matched = []
-    
+    songtitles = []
+
     for song in l:
-        if song[0].lower() == title.lower():
-            inputtedSong = song
-            lyrics1 = song[1]
-        else:
-            compareList.append(song)
+        a = song[0].lower()
+        songtitles.append(a)
     
-    song1 = one(canon(lyrics1))
+    if title.lower() not in songtitles:
+        print("This song title is not in the Beatles database, try again next time!")
     
-    for song in compareList:
-        lyrics2 = song[1]
-        song2 = frequency(canon(lyrics2))
-        wordList = match(song1,song2)
-        wordList.append(song[0])
-        matchList.append(wordList)
+    else:
+        for song in l:
+            if song[0].lower() == title.lower():
+                inputtedSong = song
+                lyrics1 = song[1]
+            else:
+                compareList.append(song)
     
-    for i in range(0,len(matchList)):
-        if len(matchList[i]) == len(max(matchList,key=len)):
-            matched.append(matchList[i])
+        song1 = one(canon(lyrics1))
     
-    keywords = []
-    for i in range(0,len(matched)):
-        for j in range(0,len(matched[i])):
-            if matched[i][j] != matched[i][-1]:
-                key = matched[i][j][0].title()
-                keywords.append(key)
+        for song in compareList:
+            lyrics2 = song[1]
+            song2 = frequency(canon(lyrics2))
+            wordList = match(song1,song2)
+            wordList.append(song[0])
+            matchList.append(wordList)
     
-    print("Your generated song is: {}.".format(matched[0][-1]))
-    print("The keywords identified are: {}".format(', '.join(keywords)))
+        for i in range(0,len(matchList)):
+            if len(matchList[i]) == len(max(matchList,key=len)):
+                matched.append(matchList[i])
+    
+        keywords = []
+        for i in range(0,len(matched)):
+            for j in range(0,len(matched[i])):
+                if matched[i][j] != matched[i][-1]:
+                    key = matched[i][j][0].title()
+                    keywords.append(key)
+    
+        print("Your generated song is: {}.".format(matched[0][-1]))
+        print("The keywords identified are: {}".format(', '.join(keywords)))
 
 def identify(s,l):
     """Finds the song with the most frequency of an inputted keyword."""
@@ -174,16 +183,22 @@ The Beatles song lyric database is from George Wagner's Beatles Website.
 """)
 
     for i in itertools.count():
-        decision = input("""Would you like to enter a song or a keyword? 
+        for i in itertools.count():
+            decision = input("""Would you like to enter a song or a keyword? 
 (Please type 'song' or 'word') """)
 
-        if decision == "song":
-            generate(readDB())
+            if decision == "song":
+                generate(readDB())
+                break
 
-        elif decision == "word":
-            s = input("Keyword? ")
-            identify(s, readDB())
+            elif decision == "word":
+                s = input("Keyword? ")
+                identify(s, readDB())
+                break
 
+            else:
+                print("Let's try again.")
+        
         print("""
 """)
         decision2 = input("Would you like to use this app again? (yes or no) ")
